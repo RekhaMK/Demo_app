@@ -13,11 +13,7 @@ pipeline {
         BUILD_NO = "${env.BUILD_NUMBER}"
        
     }
-    options {
-        office365ConnectorWebhooks([
-            [name: "Office 365", Url: credentials("webhook_url"), notifyBackToNormal: true, notifyFailure: true, notifyRepeatedFailure: true, notifySuccess: true, notifyAborted: true]
-        ])
-      }
+   }
     stages {
         stage ('Checkout') {
             steps {
